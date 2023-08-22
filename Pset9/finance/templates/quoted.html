@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <!-- Using {{ xxx }} can reference to passed in values (in .py -> stock = stock)-->
+    <!-- Outputs comma separated list, access each value through {{stock["xxx"]}} -->
+
+    <p> A share of {{ stock["name"] }} ({{ stock["symbol"] }}) costs {{ usd(stock["price"]) }}. </p>
+
+{% endblock %}
